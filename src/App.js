@@ -21,7 +21,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <HeaderSection/>
-        <SearchArea setSearchedValue={this.setSearchedValue}/>
+        <SearchArea/>
       </div>  
     )
   }
