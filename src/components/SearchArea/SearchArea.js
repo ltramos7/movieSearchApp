@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
+import SearchResultsList from '../SearchResultsList/SearchResultsList'
 
 export default class SearchArea extends Component {
 
     constructor(){
         super()
         this.state = {
-            searchedMovie: ""
+            searchedMovie: "",
+            matchingMovies: []
         }
     }
     
-    setSearchedValue = (e) => {
+    setSearchedMovie = (e) => {
         e.preventDefault()
         
         this.setState({
@@ -21,19 +23,21 @@ export default class SearchArea extends Component {
         e.preventDefault()
         fetch(`http://www.omdbapi.com/?apikey=acb05252&s=${this.state.searchedMovie}`)
         .then(resp => resp.json())
-        .then( data => {console.log(data)})
+        .then( data => this.setState({matchingMovies: data.Search}))
     }
    
 
     render() {
+        console.log(this.state.matchingMovies)
         return (
             <div>
                 <section>
                     <form>
-                        <input placeholder="Search Here..." onChange={this.setSearchedValue}></input>
+                        <input placeholder="Search Here..." onChange={this.setSearchedMovie}></input>
                         <button onClick={this.fetchMatchingMovies}>Search</button>
                     </form>
                 </section>
+                <SearchResultsList matchingMovies={this.state.matchingMovies}/>
             </div>
         )
     }
