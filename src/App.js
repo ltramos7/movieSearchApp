@@ -10,20 +10,14 @@ export default class App extends Component {
   constructor(){
     super()
     this.state = {
-      searchedMovie: ""
+      
     }
   }
 
-  setSearchedValue = (e) => {
-    e.preventDefault()
-    
-    this.setState({
-      searchedMovie: e.target.value
-    })
-  }
+  
 
   render() {
-    console.log("searched Movie: ", this.state.searchedMovie)
+    
     return (
       <div className="App">
         <HeaderSection/>
