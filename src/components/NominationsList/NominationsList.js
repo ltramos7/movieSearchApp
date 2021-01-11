@@ -10,7 +10,6 @@ export default class NominationsList extends Component {
                 <NominationCard movie={movie}/>
             )
         })
-        
     }
 
 
