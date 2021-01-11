@@ -7,11 +7,10 @@ export default class NominationsList extends Component {
         let nominatedMovies = this.props.nominatedMovies
         return nominatedMovies.map(movie => {
             return(
-                <NominationCard movie={movie}/>
+                <NominationCard key={movie.imdbID} movie={movie}/>
             )
         })
     }
-
 
     render() {
         return (
