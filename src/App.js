@@ -16,15 +16,20 @@ export default class App extends Component {
     }
   }
 
-  setNominatedMovie = () => {
-    console.log("set nominated movie function reached")
-    // this.setState({
-    //   nominatedMovies: [...this.state.nominatedMovies, movie]
-    // })
+  setNominatedMovie = (movie) => {
+    
+    if(this.state.nominatedMovies.length < 5){
+      this.setState({
+        nominatedMovies: [...this.state.nominatedMovies, movie]
+      })
+    }else{
+      alert("Sorry, only 5 nominations are allowed.")
+    }
+    
   }
 
   render() {
-    console.log("nominate movies: ", this.state.nominatedMovies)
+    console.log("nominated movies: ", this.state.nominatedMovies)
     return (
       <div className="App">
         <HeaderSection/>
