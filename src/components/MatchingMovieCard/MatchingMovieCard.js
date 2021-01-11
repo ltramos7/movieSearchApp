@@ -21,7 +21,8 @@ export default class MatchingMovieCard extends Component {
             <div>
                 <p>Title: {movie.Title}</p>
                 <p>Release Year: {movie.Year}</p>
-                <button disabled={this.state.disabled} onClick={() => {this.props.setNominatedMovie(movie); this.disableNominateBtn();}}>Nominate</button>
+                {/* <button disabled={this.state.disabled} onClick={() => {this.props.setNominatedMovie(movie); this.disableNominateBtn();}}>Nominate</button> */}
+                <button disabled={this.props.disabled}>Nominate</button>
             </div>
         )
     }

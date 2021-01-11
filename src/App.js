@@ -40,7 +40,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <HeaderSection/>
-        <SearchArea setNominatedMovie={this.setNominatedMovie}/>
+        <SearchArea setNominatedMovie={this.setNominatedMovie} disabled={this.state.disabled}/>
         <NominationsList nominatedMovies={this.state.nominatedMovies} removeNominatedMoive={this.removeNominatedMoive}/>
       </div>  
     )
