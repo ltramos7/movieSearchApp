@@ -7,7 +7,7 @@ export default class NominationsList extends Component {
         let nominatedMovies = this.props.nominatedMovies
         return nominatedMovies.map(movie => {
             return(
-                <NominationCard key={movie.imdbID} movie={movie} removeNominatedMoive={this.props.removeNominatedMoive} disabled={this.props.disabled}/>
+                <NominationCard key={movie.imdbID} movie={movie} removeNominatedMoive={this.props.removeNominatedMoive} disabled={this.props.disabled} toggleDisabledValue={this.props.toggleDisabledValue}/>
             )
         })
     }

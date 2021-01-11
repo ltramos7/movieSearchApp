@@ -8,7 +8,7 @@ export default class NominationCard extends Component {
             <div>
                 <p>Title: {movie.Title}</p>
                 <p>Year: {movie.Year}</p>
-                <button onClick={()=>{this.props.removeNominatedMoive(movie)}}>Remove</button>
+                <button onClick={()=>{this.props.removeNominatedMoive(movie); this.props.toggleDisabledValue();}}>Remove</button>
             </div>
         )
     }
