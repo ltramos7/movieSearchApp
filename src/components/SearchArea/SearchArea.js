@@ -26,9 +26,8 @@ export default class SearchArea extends Component {
         .then( data => this.setState({matchingMovies: data.Search}))
     }
    
-
     render() {
-        console.log(this.state.matchingMovies)
+    
         return (
             <div>
                 <section>
