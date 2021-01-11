@@ -26,8 +26,12 @@ export default class App extends Component {
     }
   }
 
-  removeNominatedMoive = () => {
-    console.log("removeNominatedMovie function reached")
+  removeNominatedMoive = (removedMovie) => {
+    this.setState({
+      nominatedMovies: this.state.nominatedMovies.filter((movie) => {
+        return movie !== removedMovie
+      })
+    })
   }
 
   render() {
