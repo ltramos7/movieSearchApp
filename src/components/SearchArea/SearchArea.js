@@ -36,7 +36,7 @@ export default class SearchArea extends Component {
                         <button onClick={this.fetchMatchingMovies}>Search</button>
                     </form>
                 </section>
-                <SearchResultsList matchingMovies={this.state.matchingMovies} setNominatedMovie={this.props.setNominatedMovie} disabled={this.props.disabled}/>
+                <SearchResultsList matchingMovies={this.state.matchingMovies} setNominatedMovie={this.props.setNominatedMovie} disabled={this.props.disabled} toggleDisabledValue={this.props.toggleDisabledValue}/>
             </div>
         )
     }
