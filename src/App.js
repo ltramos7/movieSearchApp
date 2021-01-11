@@ -35,7 +35,7 @@ export default class App extends Component {
         <HeaderSection/>
         <SearchArea setNominatedMovie={this.setNominatedMovie}/>
         {/* <NominationsList/> which is render NominationCard */}
-        <NominationsList/>
+        <NominationsList nominatedMovies={this.state.nominatedMovies}/>
       </div>  
     )
   }

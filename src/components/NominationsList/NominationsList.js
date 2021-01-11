@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
+import NominationCard from '../NominationCard/NominationCard'
 
 export default class NominationsList extends Component {
     
     createNominateMovieCards = () => {
-        console.log("createNominateMovieCards function met")
+        let nominatedMovies = this.props.nominatedMovies
+        return nominatedMovies.map(movie => {
+            return(
+                <NominationCard movie={movie}/>
+            )
+        })
+        
     }
+
 
     render() {
         return (
