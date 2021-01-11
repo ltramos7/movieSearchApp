@@ -24,7 +24,10 @@ export default class App extends Component {
     }else{
       alert("Sorry, only 5 nominations are allowed.")
     }
-    
+  }
+
+  removeNominatedMoive = () => {
+    console.log("removeNominatedMovie function reached")
   }
 
   render() {
@@ -33,7 +36,7 @@ export default class App extends Component {
       <div className="App">
         <HeaderSection/>
         <SearchArea setNominatedMovie={this.setNominatedMovie}/>
-        <NominationsList nominatedMovies={this.state.nominatedMovies}/>
+        <NominationsList nominatedMovies={this.state.nominatedMovies} removeNominatedMoive={this.removeNominatedMoive}/>
       </div>  
     )
   }
