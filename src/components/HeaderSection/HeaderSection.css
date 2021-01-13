@@ -1,0 +1,12 @@
+.headerSection{
+    background-color: orange;
+}
+
+.title{
+    margin: 0;
+    padding:0;
+}
+
+.headerSection h1{
+    margin: 0;
+}
