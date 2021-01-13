@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import NominationCard from '../NominationCard/NominationCard'
+import './NominationsList.css'
 
 export default class NominationsList extends Component {
     
@@ -14,7 +15,7 @@ export default class NominationsList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="nominationsListContainer">
                 {this.createNominateMovieCards()}
             </div>
         )
