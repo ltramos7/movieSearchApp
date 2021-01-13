@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './MatchingMovieCard.css'
 export default class MatchingMovieCard extends Component {
 
     // constructor(){
@@ -18,7 +18,7 @@ export default class MatchingMovieCard extends Component {
     render() {
         let movie = this.props.movie
         return (
-            <div>
+            <div className="matchingMovieCard">
                 <p>Title: {movie.Title}</p>
                 <p>Release Year: {movie.Year}</p>
                 {/* <button disabled={this.state.disabled} onClick={() => {this.props.setNominatedMovie(movie); this.disableNominateBtn();}}>Nominate</button> */}
