@@ -1,3 +1,10 @@
-/* .App {
-  text-align: center;
-} */
+.App {
+  /* text-align: center; */
+  display: grid;
+  grid-template-columns: repeat(2,3fr);
+  grid-template-rows: auto;
+}
+
+.headerSection{
+  grid-column: 1/3;
+}
