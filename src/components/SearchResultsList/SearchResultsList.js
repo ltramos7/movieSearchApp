@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MatchingMovieCard from '../MatchingMovieCard/MatchingMovieCard'
+import './SearchResultsList.css'
 
 export default class SearchResultsList extends Component {
 
@@ -14,7 +15,7 @@ export default class SearchResultsList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="searchResultsListContainer">
                 {this.createMatchingMovieCards()}
             </div>
         )
