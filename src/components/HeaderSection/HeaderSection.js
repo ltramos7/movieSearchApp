@@ -4,8 +4,8 @@ import './HeaderSection.css'
 export default class HeaderSection extends Component {
     render() {
         return (
-            <div>
-                <section className="headerSection">
+            <div className="headerSection">
+                
                     <div className="title">
                         <h1>Welcome To Movie Search!</h1>
                     </div>
@@ -15,7 +15,7 @@ export default class HeaderSection extends Component {
                             <button>Signup</button>
                         </form>
                     </div>
-                </section>
+                
             </div>
         )
     }

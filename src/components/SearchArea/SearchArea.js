@@ -30,13 +30,13 @@ export default class SearchArea extends Component {
     render() {
     
         return (
-            <div>
-                <section className="searchAreaContainer">
+            <div className="searchAreaContainer">
+                <div className="searchBarContainer">
                     <form>
                         <input placeholder="Search Here..." onChange={this.setSearchedMovie}></input>
                         <button className="searchButton" onClick={this.fetchMatchingMovies}>Search</button>
                     </form>
-                </section>
+                </div>
                 <SearchResultsList matchingMovies={this.state.matchingMovies} setNominatedMovie={this.props.setNominatedMovie} disabled={this.props.disabled} toggleDisabledValue={this.props.toggleDisabledValue}/>
             </div>
         )
