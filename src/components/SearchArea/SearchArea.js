@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SearchResultsList from '../SearchResultsList/SearchResultsList'
+import './SearchArea.css'
 
 export default class SearchArea extends Component {
 
@@ -30,10 +31,10 @@ export default class SearchArea extends Component {
     
         return (
             <div>
-                <section>
+                <section className="searchAreaContainer">
                     <form>
                         <input placeholder="Search Here..." onChange={this.setSearchedMovie}></input>
-                        <button onClick={this.fetchMatchingMovies}>Search</button>
+                        <button className="searchButton" onClick={this.fetchMatchingMovies}>Search</button>
                     </form>
                 </section>
                 <SearchResultsList matchingMovies={this.state.matchingMovies} setNominatedMovie={this.props.setNominatedMovie} disabled={this.props.disabled} toggleDisabledValue={this.props.toggleDisabledValue}/>
