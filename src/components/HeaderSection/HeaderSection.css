@@ -1,12 +1,15 @@
 .headerSection{
-    background-color: orange;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .title{
-    margin: 0;
-    padding:0;
+    grid-column: 1/3;
 }
 
-.headerSection h1{
-    margin: 0;
+.navButtons{
+    grid-column: 3/4;
+    margin: auto;
 }
