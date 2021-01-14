@@ -7,7 +7,8 @@ export default class HeaderSection extends Component {
             <div className="headerSection">
                 
                     <div className="title">
-                        <h1>Welcome To Movie Search!</h1>
+                        <h1>The Shoppies</h1>
+                        <p>Like the Dundees, but for movies.</p>
                     </div>
                     <div className="navButtons">
                         <form>
