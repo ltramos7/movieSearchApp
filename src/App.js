@@ -12,9 +12,9 @@ export default class App extends Component {
     super()
     this.state = {
       nominatedMovies: [],
-      disabled: false
     }
   }
+
 
   setNominatedMovie = (movie) => {
     
@@ -35,17 +35,13 @@ export default class App extends Component {
     })
   }
 
-  toggleDisabledValue = () => {
-    console.log("toggleDisabledValue function reached")
-  }
-
   render() {
-    console.log("nominated movies: ", this.state.nominatedMovies)
+  
     return (
       <div className="App">
         <HeaderSection/>
-        <SearchArea setNominatedMovie={this.setNominatedMovie} disabled={this.state.disabled} toggleDisabledValue={this.toggleDisabledValue}/>
-        <NominationsList nominatedMovies={this.state.nominatedMovies} removeNominatedMoive={this.removeNominatedMoive} disabled={this.state.disabled} toggleDisabledValue={this.toggleDisabledValue}/>
+        <SearchArea setNominatedMovie={this.setNominatedMovie} matchingMovies={this.state.matchingMovies} disabled={this.state.disabled}/>
+        <NominationsList nominatedMovies={this.state.nominatedMovies} removeNominatedMoive={this.removeNominatedMoive} disabled={this.state.disabled}/>
       </div>  
     )
   }
