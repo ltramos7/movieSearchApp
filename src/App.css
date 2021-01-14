@@ -14,3 +14,15 @@ body{
 .headerSection{
   grid-column: 1/3;
 }
+
+.searchAreaContainer{
+  grid-column: 1/3;
+}
+
+.searchResultsListContainer{
+  grid-column: 1/2;
+}
+
+.nominationsListContainer{
+  grid-column: 2/3;
+}
