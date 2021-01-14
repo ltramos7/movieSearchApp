@@ -6,4 +6,24 @@
 
 .searchButton{
     margin-left: 1rem;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    padding: .7rem 1rem;
+    font-size: 16px;
+    border: none;
+}
+
+.searchButton:hover{
+    background-color: rgb(206, 206, 206);    
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+input{
+    width: 60%;
+    padding: .7rem;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
 }
