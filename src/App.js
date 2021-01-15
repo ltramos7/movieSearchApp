@@ -38,13 +38,6 @@ export default class App extends Component {
     })
   }
 
-  fetchMatchingMovies = (e) => {
-    e.preventDefault()
-    fetch(`http://www.omdbapi.com/?apikey=acb05252&s=${this.state.searchedMovie}`)
-    .then(resp => resp.json())
-    .then( data => this.setState({matchingMovies: data.Search}))
-  }
-
   setSearchedMovie = (e) => {
     e.preventDefault()
     
@@ -52,6 +45,25 @@ export default class App extends Component {
       searchedMovie: e.target.value
     })
   }
+
+  fetchMatchingMovies = (e) => {
+    e.preventDefault()
+    fetch(`http://www.omdbapi.com/?apikey=acb05252&s=${this.state.searchedMovie}`)
+    .then(resp => resp.json())
+    .then( data => this.determineResult(data))
+    // .then( data => this.setState({matchingMovies: data.Search}))
+  }
+
+  determineResult = (data) => {
+    // console.log(data)
+    if (data.Response == "False"){
+      alert("Unable find matching movies. Please check spelling.")
+    }else {
+      this.setState({matchingMovies: data.Search})
+    }
+  }
+
+ 
 
   render() {
   
