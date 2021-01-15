@@ -51,11 +51,9 @@ export default class App extends Component {
     fetch(`http://www.omdbapi.com/?apikey=acb05252&s=${this.state.searchedMovie}`)
     .then(resp => resp.json())
     .then( data => this.determineResult(data))
-    // .then( data => this.setState({matchingMovies: data.Search}))
   }
 
   determineResult = (data) => {
-    // console.log(data)
     if (data.Response == "False"){
       alert("Unable find matching movies. Please check spelling.")
     }else {
