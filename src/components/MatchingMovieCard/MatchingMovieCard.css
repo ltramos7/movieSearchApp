@@ -8,8 +8,9 @@
 }
 
 .matchingMovieCard button {
-    color: white;
-    background-color: rgb(97, 45, 45);
+    /* color: white; */
+    /* background-color: rgb(97, 45, 45); */
+    background-color: rgb(224, 224, 224);
     cursor: pointer;
     border-radius: 5px;
     border: none;
@@ -19,6 +20,7 @@
 }
 
 .matchingMovieCard button:hover{
+    color: white;
     background-color: rgb(173, 61, 61);    
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
