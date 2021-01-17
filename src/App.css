@@ -1,3 +1,11 @@
+body{
+  /* background-image: linear-gradient(180deg, #25110b, #c32a2a); */
+  background-image: linear-gradient(180deg,#000000, #25110b, #661b1b);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ 
+}
+
 .App {
   /* text-align: center; */
   display: grid;
@@ -7,4 +15,16 @@
 
 .headerSection{
   grid-column: 1/3;
+}
+
+.searchAreaContainer{
+  grid-column: 1/3;
+}
+
+.searchResultsListContainer{
+  grid-column: 1/2;
+}
+
+.nominationsListContainer{
+  grid-column: 2/3;
 }
