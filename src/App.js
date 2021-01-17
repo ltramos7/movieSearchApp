@@ -48,7 +48,7 @@ export default class App extends Component {
 
   fetchMatchingMovies = (e) => {
     e.preventDefault()
-    fetch(`http://www.omdbapi.com/?apikey=acb05252&s=${this.state.searchedMovie}`)
+    fetch(`https://www.omdbapi.com/?apikey=acb05252&s=${this.state.searchedMovie}`)
     .then(resp => resp.json())
     .then( data => this.determineResult(data))
   }
