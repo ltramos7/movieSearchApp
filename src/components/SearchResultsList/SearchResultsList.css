@@ -1,5 +1,8 @@
 .searchResultsListContainer{
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-bottom: 2rem;
+    height: 30rem;
+    overflow-y: auto;
     /* background-color: pink; */
 }

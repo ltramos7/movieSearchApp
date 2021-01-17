@@ -1,7 +1,10 @@
 .nominationsListContainer{
     /* margin-top: 1.3rem; */
     padding-left: 2rem;
-    padding-right: 2rem;
+    padding-right: 2rem;    
+    padding-bottom: 2rem;
+    height: 30rem;
+    overflow-y: auto;
     /* background-color: green; */
 }
 
